@@ -113,7 +113,7 @@ image:
   debug: false
 ## @param database Select which database backend Kong will use. Can be 'postgresql', 'cassandra' or 'off'
 ##
-database: postgresql
+database: off
 ## @section Kong deployment / daemonset parameters
 ##
 
@@ -122,7 +122,7 @@ database: postgresql
 useDaemonset: false
 ## @param replicaCount Number of Kong replicas
 ##
-replicaCount: 2
+replicaCount: 1
 ## Kong containers' Security Context
 ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-container
 ## @param containerSecurityContext.enabled Enabled containers' Security Context
@@ -663,7 +663,7 @@ ingress:
 ingressController:
   ## @param ingressController.enabled Enable/disable the Kong Ingress Controller
   ##
-  enabled: true
+  enabled: false
   ## @param ingressController.image.registry [default: REGISTRY_NAME] Kong Ingress Controller image registry
   ## @param ingressController.image.repository [default: REPOSITORY_NAME/kong-ingress-controller] Kong Ingress Controller image name
   ## @skip ingressController.image.tag Kong Ingress Controller image tag
@@ -903,7 +903,7 @@ migration:
 ## @param postgresql.architecture PostgreSQL architecture (`standalone` or `replication`)
 ##
 postgresql:
-  enabled: true
+  enabled: false
   auth:
     username: kong
     password: ""
