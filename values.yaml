@@ -92,9 +92,9 @@ diagnosticMode:
 ## @param image.debug Enable image debug mode
 ##
 image:
-  registry: docker.io
-  repository: bitnami/kong
-  tag: 3.9.0-debian-12-r12
+  registry: harborcorexcr.cn1-dev.edge.cloud-siemens.cn
+  repository: demo/kong
+  tag: latest
   digest: ""
   ## Specify a imagePullPolicy
   ## ref: https://kubernetes.io/docs/concepts/containers/images/#pre-pulled-images
@@ -107,7 +107,8 @@ image:
   ## pullSecrets:
   ##   - myRegistryKeySecretName
   ##
-  pullSecrets: []
+  pullSecrets:
+    - demokong-pull-secret
   ## Enable debug mode
   ##
   debug: false
